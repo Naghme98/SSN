@@ -1,0 +1,25 @@
+spring:
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 00e9de6c28d08871135b
+            client-secret: 61885d3af6c94a565a89d513219ac8cb0468da99
+            scope:
+              - read:user
+              - notifications
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+github:
+  base:
+    url: https://api.github.com/
+
+logging:
+  level:
+    root: INFO
+    org.springframework.security: DEBUG
+
+server:
+  port: 9090
